@@ -223,7 +223,7 @@ function App(props) {
           2,
           parseInt(
             Math.floor(Number(totalcircu.rows[0].supply.split(" ")[0])) /
-            25000000
+              25000000
           )
         )
       );
@@ -440,10 +440,8 @@ function App(props) {
           action: "User added comm.",
         });
       } catch (error) {
-
         actionpuccis(error);
         console.log(error.message);
-
       }
     } else {
       showModal();
@@ -618,8 +616,8 @@ function App(props) {
     return parseInt(
       //(Math.pow(communitystake / fullstake, 1 / 3) * 8225000 + 1175000) /
       (Math.pow(communitystake / fullstake, 1 / 3) * 102812 + 14687) /
-      //(Math.pow(communitystake / fullstake, 1 / 3) * 1 + 1) /
-      halvingdivider()
+        //(Math.pow(communitystake / fullstake, 1 / 3) * 1 + 1) /
+        halvingdivider()
     ); //LISA KUUP JUUR communitystake/fullstake sellele
   };
 
@@ -627,10 +625,9 @@ function App(props) {
     return parseFloat(
       //(Math.pow(communitystake / fullstake, 1 / 3) * 315000 + 45000) /
       (Math.pow(communitystake / fullstake, 1 / 3) * 472 + 67) /
-      halvingdivider()
+        halvingdivider()
     ).toFixed(4); //LISA KUUP JUUR communitystake/fullstake sellele
   };
-
 
   //var str1 = ".png ";
   //var str2 = {u.communityname.substring(0, 90)};    return(<a>{totalstaked.rows[0].totalstaked}</a>)
@@ -686,13 +683,6 @@ function App(props) {
                 component={Link}
                 to={"/"}
               ></Typography>
-
-              <Button
-                style={{ color: "inherit", "border-radius": "50px" }}
-                href={`${window.location.origin}/claim`}
-              >
-                CLAIM TOKENS
-              </Button>
 
               <Button
                 style={{ color: "inherit", "border-radius": "50px" }}
@@ -977,12 +967,11 @@ function App(props) {
               borderRadius: "15px",
               fontSize: "15px",
               "font-weight": "bold",
-              "padding": "15px",
-              "width": "100%",
+              padding: "15px",
+              width: "100%",
               opacity: "0.9",
             }}
             id="claimbutton"
-
             //style={{ color: "inherit", "border-radius": "50px" }}
             href={`${window.location.origin}/claim`}
           >
@@ -991,7 +980,6 @@ function App(props) {
         </div>
 
         <div class="parent">
-
           {data.rows.map((u, i) => {
             return (
               <div class="frontpagecard">
@@ -1107,13 +1095,17 @@ function App(props) {
                 fontSize: "14px",
               }}
             >
-              <div class="line" style={{ "padding-top": "7px" }} style={{ "color": "black" }}>
+              <div
+                class="line"
+                style={{ "padding-top": "7px" }}
+                style={{ color: "black" }}
+              >
                 <a
                   class="identfier"
                   style={{
                     "vertical-align": "top",
                   }}
-                  style={{ "color": "black" }}
+                  style={{ color: "black" }}
                 >
                   Halving events:
                 </a>
@@ -1122,7 +1114,7 @@ function App(props) {
                   style={{
                     fontWeight: "bold",
                     "vertical-align": "top",
-                    "color": "black",
+                    color: "black",
                   }}
                   data-html="true"
                   data-for="pede"
@@ -1154,12 +1146,15 @@ function App(props) {
               </div>
               <hr />
               <div class="line" style={{ "padding-bottom": "7px" }}>
-                <a class="identfier" style={{ "color": "black" }}>To mine until next halving:</a>
+                <a class="identfier" style={{ color: "black" }}>
+                  To mine until next halving:
+                </a>
                 <a
                   class="value"
                   style={{
                     "font-weight": "",
-                  }} style={{ "color": "black" }}
+                  }}
+                  style={{ color: "black" }}
                 >
                   <b>{stakeformatter(tonexthalving(gettotalcircu()))} GOVRN</b>
                 </a>
